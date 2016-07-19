@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  labels:
+    name: simpleservicecontroller
+    visualize: "true"
+  name: simpleservicecontroller
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: simpleservicepod
+        visualize: "true"
+    spec:
+      containers:
+      - image: gcr.io/kubernetestests/simpleservice:01
+        name: simpleservice
+        ports:
+        - name: simpleservice
+          containerPort: 9090
+          hostPort: 9090
+
