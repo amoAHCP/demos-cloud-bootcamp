@@ -43,10 +43,12 @@
 
 
     <modules>
+        <module>simpleJavaContainer</module>
         <module>simpleService</module>
-              <module>simpleServiceMaven</module>
+        <module>simpleServiceMaven</module>
         <module>translateService</module>
-  <module>serviceWithDB  </module>
+        <module>faceDetectionService</module>
+        <module>serviceWithDB</module>
     </modules>
 
     <repositories>

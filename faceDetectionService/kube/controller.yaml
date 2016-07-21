@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  labels:
+    name: facecontroller
+    visualize: "true"
+  name: facecontroller
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: faceservicepod
+        visualize: "true"
+    spec:
+      containers:
+      - image: gcr.io/kubernetestests/facedetectiondervice:01
+        name: face
+        ports:
+        - name: face
+          containerPort: 9090
+          hostPort: 9090
+
