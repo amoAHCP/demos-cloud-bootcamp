@@ -1,0 +1,24 @@
+version: '2'
+services:
+  mongo:
+   image: mongo
+   command: "--smallfiles --logpath=/dev/null"
+
+  read:
+    image: amoahcp/vertx-read:1.0
+    depends_on:
+         - "mongo"
+
+  write:
+    image: amoahcp/vertx-write:1.0
+    depends_on:
+        - "mongo"
+
+  frontend:
+    image: amoahcp/vertx-frontend:1.0
+    ports:
+        - "8181:8181"
+    depends_on:
+        - "mongo"
+        - "read"
+        - "write"

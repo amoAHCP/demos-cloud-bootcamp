@@ -1,0 +1,16 @@
+version: '2'
+services:
+  mongo:
+   image: mongo
+   command: "--smallfiles --logpath=/dev/null"
+
+  read:
+    build: read-verticle
+
+  write:
+     build: write-verticle
+
+  frontend:
+    build: frontend-verticle
+    ports:
+        - "8181:8181"

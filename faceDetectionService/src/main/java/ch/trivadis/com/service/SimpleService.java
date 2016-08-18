@@ -129,7 +129,7 @@ public class SimpleService extends AbstractVerticle {
                         .annotate(new BatchAnnotateImagesRequest().setRequests(ImmutableList.of(request)));
         // Due to a bug: requests to Vision API containing large images fail when GZipped.
         annotate.setDisableGZipContent(true);
-        annotate.setKey(config().getString("apikey", ""));
+        annotate.setKey(config().getString("apikey", "AIzaSyCNZO27GwkhwjuJTMbT6keogfRBGSeeDMo"));
 
         BatchAnnotateImagesResponse batchResponse = annotate.execute();
         assert batchResponse.getResponses().size() == 1;

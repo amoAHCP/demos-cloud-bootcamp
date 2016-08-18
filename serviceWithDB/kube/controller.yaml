@@ -2,22 +2,22 @@ apiVersion: v1
 kind: ReplicationController
 metadata:
   labels:
-    name: simpleservicecontroller
+    name: sdbcontroller
     visualize: "true"
-  name: simpleservicecontroller
+  name: sdbcontroller
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        name: simpleservicepod
+        name: sdbpod
         visualize: "true"
     spec:
       containers:
-      - image: gcr.io/kubernetestests/simpleservice:01
-        name: simpleservice
+      - image: gcr.io/kubernetestests/simpleservicewithdb:01
+        name: sdb
         ports:
-        - name: simpleservice
-          containerPort: 9090
-          hostPort: 9090
+        - name: sdb
+          containerPort: 8080
+          hostPort: 8080
 

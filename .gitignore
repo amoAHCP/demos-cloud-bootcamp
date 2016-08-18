@@ -12,3 +12,10 @@
 hs_err_pid*
 target
 *.iml
+.idea
+.idea/*
+.vertx
+
+
+
+
