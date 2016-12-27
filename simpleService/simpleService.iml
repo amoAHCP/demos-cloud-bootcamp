@@ -12,12 +12,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Maven: org.jacpfx:vxms-verticle:1.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.jacpfx:vxms-common:1.0-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: javax.ws.rs:javax.ws.rs-api:2.0.1" level="project" />
-    <orderEntry type="library" name="Maven: io.vertx:vertx-hazelcast:3.3.2" level="project" />
-    <orderEntry type="library" name="Maven: com.hazelcast:hazelcast:3.6.3" level="project" />
     <orderEntry type="library" name="Maven: io.vertx:vertx-core:3.3.2" level="project" />
-    <orderEntry type="library" name="Maven: io.vertx:vertx-dropwizard-metrics:3.3.2" level="project" />
-    <orderEntry type="library" name="Maven: io.dropwizard.metrics:metrics-core:3.1.2" level="project" />
     <orderEntry type="library" name="Maven: io.vertx:vertx-service-factory:3.3.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: io.vertx:vertx-core:test-jar:tests:3.3.2" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-common:4.1.1.Final" level="project" />
