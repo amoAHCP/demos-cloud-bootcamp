@@ -3,7 +3,7 @@
 
 mvn clean package
 
-## build docker image
+## build docker image, The image name must contain your project name (*gcr.io/kubernetestests/*)
 docker build -t gcr.io/kubernetestests/simpleservice:01 .
 
 ## start docker image
@@ -14,7 +14,7 @@ docker run -it -p 8080:9090 gcr.io/kubernetestests/simpleservice:01
 
 ## push image to gcloud repo
 
-Be aware of the naming convention when using *gcloud docker* . The image name must contain your project name (*gcr.io/kubernetestests/*)
+Be aware of the naming convention when using *gcloud docker* . 
 
 gcloud docker push gcr.io/kubernetestests/simpleservice:01
 
