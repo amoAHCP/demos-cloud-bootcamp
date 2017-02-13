@@ -1,0 +1,22 @@
+md-sidenav>md-content>button.md-button {
+	text-align: left;
+}
+
+md-dialog>md-header {
+	min-width: 500px;
+	text-align: center;
+	vertical-align: middle;
+	height: 50px;
+	line-height: 50px;
+	color: rgba(255, 255, 255, 0.87);
+	background-color: rgb(63, 81, 181);
+}
+
+
+header.header-nav {
+	text-align: center;
+	vertical-align: middle;
+	height: 50px;
+	line-height: 50px;
+	background-color: lightgray;
+}

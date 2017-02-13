@@ -1,0 +1,4 @@
+# https://cloud.google.com/appengine/docs/flexible/java/configuring-your-app-with-app-yaml
+runtime: java
+env: flex
+

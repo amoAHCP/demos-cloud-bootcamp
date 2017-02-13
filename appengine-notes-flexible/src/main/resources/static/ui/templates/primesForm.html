@@ -1,0 +1,35 @@
+<md-dialog aria-label="Add a note">
+	<md-header>
+		Details
+	</md-header>
+
+	<md-dialog-content layout="column"> 
+	
+		<div></div>
+
+		<md-input-container>
+		  <label>Number of requests</label>
+		  <input type="text" ng-model="requests"> </input>
+		</md-input-container>
+
+		<md-input-container>
+		  <label>Number of primes</label>
+		  <input type="text" ng-model="primes"> </input>
+		</md-input-container>
+		
+		<div>
+			Active: {{active}} Success:{{success}} Error:{{errors}}
+		</div>
+
+	</md-dialog-content>
+
+	<md-dialog-actions>
+		<md-button ng-click="calculate()"> 
+			Start calculations ...
+		</md-button>
+		<md-button ng-click="cancel()"> 
+			Close
+		</md-button>
+	</md-dialog-actions>
+
+</md-dialog>

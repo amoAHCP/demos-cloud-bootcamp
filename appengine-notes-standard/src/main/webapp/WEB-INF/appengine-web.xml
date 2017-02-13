@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
+	<application>TODO</application>
+	<version>notes-standard</version>
+	<threadsafe>true</threadsafe>
+	<env-variables>
+		<env-var name="APPNAME" value="TODO" />
+		<env-var name="APIKEY" value="TODO" />
+		<!-- 
+		cmd: 
+		set APPNAME=TODO 
+		set APIKEY=TODO
+		
+		bash: 
+		export APPNAME=TODO 
+		export APIKEY=TODO 
+		-->
+	</env-variables>
+</appengine-web-app>

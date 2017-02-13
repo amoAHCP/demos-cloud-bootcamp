@@ -1,0 +1,78 @@
+<html lang="en" ng-app="notes">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Angular Material style sheet -->
+<link rel="stylesheet"
+	href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	
+<link rel="stylesheet"
+	href="css/notes.css">
+	
+	<title>Cloud Notes Demo</title>	
+</head>
+<body ng-app="notes" layout="column"> 
+    <md-toolbar layout="row" >
+      <h1>
+      	<i class="material-icons" style="font-size: 30px;">bookmark</i>
+        <span>Cloud Notes Demo</span>
+      </h1>
+    </md-toolbar>
+
+    <div flex layout="row" ng-controller="NotesController as ctrl" ng-init="load()" id="popupContainer">
+
+        <!-- Container #3 -->
+        <md-sidenav md-is-locked-open="true" class="md-whiteframe-z2">
+          <header class="header-nav">
+          	 Navigation
+          </header>
+          
+          <md-content layout="column" layout-align="start stretch" flex>
+          	<md-button ng-click="load()">
+          		<i class="material-icons">refresh</i> 
+          		Reload notes
+          	</md-button>
+          	<md-button ng-click="add($event)">
+          		<i class="material-icons">note_add</i>
+          		Add a note
+          	</md-button>
+          	<md-button ng-click="testScaling($event)">
+          		<i class="material-icons">network_check</i>
+          		Test auto-scaling
+          	</md-button>
+          	
+          </md-content>
+          
+        </md-sidenav>
+
+        <!-- Container #4 -->
+        <md-content layout="row" layout-align="start start" layout-wrap flex id="content" >
+        
+				<md-card ng-repeat="note in notes" flex="none" > 
+					<md-card-content style="max-width: 400px;">{{note.text}}</md-card-content>
+					<md-card-actions layout="row" layout-align="end center">
+						<md-button ng-click="details($event, note)"><i class="material-icons">details</i> Details</md-button> 
+					</md-card-actions> 
+				</md-card>
+				
+        </md-content>
+
+    </div>	
+
+	<!-- Angular Material requires Angular.js Libraries -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+
+	<!-- Angular Material Library -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+
+	<script type="text/javascript" src="js/notes.js"></script>
+</body>
+</html>

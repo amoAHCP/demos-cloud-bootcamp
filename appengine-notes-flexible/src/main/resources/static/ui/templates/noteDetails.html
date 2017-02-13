@@ -1,0 +1,32 @@
+<md-dialog aria-label="Add a note">
+	<md-header>
+		Details
+	</md-header>
+
+	<md-dialog-content layout="column"> 
+	
+		<div></div>
+
+		<md-input-container>
+		  <label>Address</label>
+		  <input type="text" ng-model="address" readonly> </input>
+		</md-input-container>
+
+		<md-input-container>
+		  <label>Original Text</label>
+		  <input type="text" ng-model="textOriginal" readonly> </input>
+		</md-input-container>
+
+		<md-input-container ng-show="showTranslation">
+		  <label>Translated Text</label>
+		  <input type="text" ng-model="textTranslated" readonly> </input>
+		</md-input-container>
+	</md-dialog-content>
+
+	<md-dialog-actions>
+		<md-button ng-click="cancel()"> 
+			Cancel
+		</md-button>
+	</md-dialog-actions>
+
+</md-dialog>
