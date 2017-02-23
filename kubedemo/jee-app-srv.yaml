@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: jee-app-service
+  labels:
+	 name: jee-app-service
+spec:
+  type: LoadBalancer
+  ports:
+	 - port: 80
+	   targetPort: 8080
+      name: frontend-port
+  selector:
+      app: web

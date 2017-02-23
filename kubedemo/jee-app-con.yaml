@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: jeeappcontroller
+  labels:
+    name: jeeappcontroller
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: web
+        name: web-pod
+    spec:
+      containers:
+        - name: app-server
+          image: jboss/wildfly
+          ports:
+            - containerPort: 8080
